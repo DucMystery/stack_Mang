@@ -1,6 +1,6 @@
 public class MyStack {
 
-    private int[] arr;
+    public int[] arr;
     private int size;
     private int index=0;
 
@@ -21,12 +21,13 @@ public class MyStack {
         return false;
     }
 
-    void push(int element){
+    int push(int element){
         if (isFull()){
             throw new StackOverflowError("Stack is full !");
         }
         arr[index] =element;
         index++;
+        return arr[index];
     }
 
     int pop() throws Exception{

@@ -1,21 +1,25 @@
+
+
 public class Test {
 
     public static void main(String[] args) throws Exception {
-        MyStack stack = new MyStack(5);
+        MyStack stack = new MyStack(6);
+        int index = 0;
 
-        stack.push(5);
-        stack.push(4);
-        stack.push(3);
-        stack.push(2);
-        stack.push(1);
-
-        System.out.println("1 . Size of stack after push operation :"+stack.getSize());
-        System.out.println("2 . Pop elements from stack:");
-
-        while (!stack.isEmpty()){
-            System.out.printf("%d",stack.pop());
+        for (int i = 1; i < 6; i++) {
+            stack.push(i);
+            System.out.print(stack.arr[index] + "\t");
+            index++;
         }
-
-        System.out.printf("\n3 . Size of stack after pop operation : "+stack.getSize());
+        System.out.println("\n");
+        int index1 = 0;
+        int myArr[] = new int[7];
+        while (!stack.isEmpty()) {
+            myArr[index1] = stack.pop();
+            System.out.print(myArr[index1]+"\t");
+            index1++;
+        }
     }
+
 }
+
